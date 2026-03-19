@@ -1,0 +1,13 @@
+{
+	"dependencies": {
+		"js-yaml": "^4.1.0",
+		"steam-user": "^5.0.10"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.7"
+	},
+	"scripts": {
+		"start": "node src/bot.mjs",
+		"test": "eslint src/*.mjs"
+	}
+}
