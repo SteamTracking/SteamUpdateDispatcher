@@ -1,0 +1,7 @@
+services:
+    steam-watcher:
+        build: .
+        container_name: steam-update-dispatcher
+        volumes:
+            - ./config/:/usr/src/app/config/
+        restart: always
