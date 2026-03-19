@@ -1,4 +1,4 @@
-import { readFile, watch } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import yaml from "js-yaml";
 
 const CONFIG_FILE = "config/config.yaml";
@@ -47,7 +47,7 @@ export default class Config {
 						console.error(`Webhook configuration for app ${appid} at index ${index} is missing 'repo' or 'workflow_id'`);
 						process.exit(1);
 					}
-					if (!webhook.access_token || !process.env.GITHUB_ACCESS_TOKEN || !config.github-token) {
+					if (!webhook.access_token || !process.env.GITHUB_ACCESS_TOKEN || !config.github - token) {
 						console.error(`Webhook configuration for app ${appid} at index ${index} is missing an access token and there's no default token set`);
 						process.exit(1);
 					}
