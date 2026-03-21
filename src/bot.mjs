@@ -20,7 +20,7 @@ const sendWebhook = async (webhook) => {
 			headers: {
 				Accept: "application/vnd.github.everest-preview+json",
 				"Content-Type": "application/json",
-				Authorization: `Bearer ${webhook.access_token}`,
+				Authorization: `Bearer ${webhook.access_token || config.getDefaultGithubToken()}`,
 			},
 			body: JSON.stringify({
 				ref: webhook.branch || "main",

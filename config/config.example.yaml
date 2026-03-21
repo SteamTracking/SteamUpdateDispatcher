@@ -1,7 +1,7 @@
 # steam:
 #   username: "your_steam_username"
 #   password: "your_steam_password"
-# github-token: "your_default_github_token"
+# github_token: "your_default_github_token"
 apps:
   #Team Fortress 2
   440:
