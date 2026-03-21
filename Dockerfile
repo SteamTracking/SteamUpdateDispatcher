@@ -13,7 +13,7 @@ COPY --from=builder /usr/local/bin/node /usr/local/bin/
 COPY --from=builder /usr/local/bin/docker-entrypoint.sh /usr/local/bin/
 COPY config/config.example.yaml ./config/config.yaml
 ENTRYPOINT ["docker-entrypoint.sh"]
-VOLUME [ "/var/cache/gametracking-monitor" ]
+VOLUME [ "/var/cache/steam-update-dispatcher" ]
 USER node
 COPY --from=builder /build-stage/ ./
 CMD ["dumb-init", "node", "bot.mjs"]
