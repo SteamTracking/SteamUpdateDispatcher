@@ -2,7 +2,8 @@ import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 
 const isDocker = existsSync("/.dockerenv");
-const CACHE_FILE = isDocker ? "/var/cache/steam-update-dispatcher" : "config/cache.json";
+const isPodman = existsSync("/run/.containerenv");
+const CACHE_FILE = isDocker || isPodman ? "/var/cache/steam-update-dispatcher" : "config/cache.json";
 
 export default class Cache {
 	constructor() {
