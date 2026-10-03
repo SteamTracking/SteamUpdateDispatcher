@@ -4,7 +4,7 @@ COPY package*.json ./
 RUN npm ci
 COPY src/* ./
 
-FROM alpine:3.23
+FROM alpine:3.24
 WORKDIR /usr/src/app
 RUN apk add --no-cache libstdc++ dumb-init \
   && addgroup -g 1000 node && adduser -u 1000 -G node -s /bin/sh -D node \
