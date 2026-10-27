@@ -35,6 +35,12 @@ apps:
         #access_token:
         workflow_id: update.yml
         branch: master
+  546560:
+    webhooks:
+      - repo: "steamtracking/gametracking-halflifealyx"
+        #access_token:
+        workflow_id: update.yml
+        branch: master
   1422450:
     #branch:
     webhooks:
