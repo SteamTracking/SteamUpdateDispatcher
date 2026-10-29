@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import yaml from "js-yaml";
+import { load } from "js-yaml";
 
 const CONFIG_FILE = "config/config.yaml";
 
@@ -12,7 +12,7 @@ export default class Config {
 
 	async init() {
 		try {
-			this.#data = await readFile(CONFIG_FILE, "utf8").then((data) => yaml.load(data));
+			this.#data = await readFile(CONFIG_FILE, "utf8").then((data) => load(data));
 			this.verify();
 		} catch (err) {
 			console.error(err);
