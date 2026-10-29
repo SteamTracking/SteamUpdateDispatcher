@@ -6,7 +6,7 @@ COPY src/* ./
 
 FROM alpine:3.24
 WORKDIR /usr/src/app
-RUN apk add --no-cache libstdc++ dumb-init \
+RUN apk add --no-cache libstdc++ dumb-init libatomic \
   && addgroup -g 1000 node && adduser -u 1000 -G node -s /bin/sh -D node \
   && chown node:node ./
 COPY --from=builder /usr/local/bin/node /usr/local/bin/
