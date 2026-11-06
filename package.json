@@ -4,7 +4,7 @@
 		"steam-user": "^5.0.10"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.6.5"
+		"@biomejs/biome": "2.6.6"
 	},
 	"scripts": {
 		"start": "node src/bot.mjs",
